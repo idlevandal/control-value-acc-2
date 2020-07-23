@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { FormBuilder } from '@angular/forms';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
 	selector: 'app-root',
@@ -14,7 +14,7 @@ export class AppComponent {
 	public myForm = this.fb.group({
 		name: '',
 		email: '',
-		age: 0,
+		age: [0, Validators.min(0)],
 	})
 
 	public disableEmail(): void {
