@@ -1,7 +1,7 @@
 <div class="form-group">
     <label>Age</label>
     <!-- <p class="mb-1" style="background-color: white; font-size: 20px; padding: 6px; width: 70px; text-align: right;">{{value}}</p> -->
-    <input type="text" class="form-control my-control" [(ngModel)]='value'>
+    <input [disabled]='isDisabled' type="text" class="form-control my-control" [(ngModel)]='value'>
     <div class="mt-1">
         <button [disabled]='isDisabled' (click)='minus()' class="btn btn-danger">-</button>
         <button [disabled]='isDisabled' (click)='add()' class="btn btn-success">+</button>
